@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h4 {
+    width: 300px;
+    margin: 60px auto;
+}
+
+.tabsBox {
+    width: 700px;
+    height: 400px;
+    margin: 50px auto;
+    border: 2px solid black;
+}
+
+.firstNav {
+    width: 700px;
+    height: 41px;
+    overflow: hidden;
+}
+
+.firstNav ul {
+    list-style: none;
+    float: left;
+}
+
+.firstNav ul li {
+    position: relative;
+    float: left;
+    padding: 10px 25px;
+    border-bottom: 1px solid black;
+    background-color: white;
+    border-right: 1px solid black;
+}
+
+.firstNav ul .liActive {
+    border-bottom: 1px solid white;
+}
+
+.tabadd {
+    padding: 14px;
+    float: right;
+}
+
+.delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    line-height: 6px;
+    border-radius: 0 0 0 10px;
+    background-color: aquamarine;
+    /* background-color: black; */
+}
+
+.delete span{
+    width: 15px;
+    float: right;
+}
+
+.tabsContent section {
+    display: none;
+}
+
+.tabsContent .contentActive {
+    display: block;
+    width: 696px;
+    height: 354px;
+    padding: 10px;
+    border-top: 1px solid black;
+}
+
+input {
+    width: 100px;
+    height: 100%;
+}
