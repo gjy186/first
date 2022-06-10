@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fun=function(){
+            console.log("我是普通函数");
+        }
+        const fun1=()=>{
+            console.log("我是箭头函数");
+        }
+        fun1();
+        const fun2=()=>{
+            return "我是箭头"
+        }
+        const fun3=name=>{
+            return name
+        }
+        console.log(fun3("王麻字"));
+
+        //有一个参数花括号 只有return可以简写
+        const fun4=name=>"你的名字"+name
+        console.log(fun4("dgj"));
+
+        //箭头函数中的this是没有指向的,他会在作用域链上找上一级的this指向
+        window.name="张三"
+        function getname(){
+            console.log(this.name);
+        }
+        getname();
+        var getname1=()=>{
+            console.log(this.name);
+        }
+        getname1();
+
+        const school={
+            name:"欣知"
+        }
+        getname.call(school);
+        console.log(school);
+
+
+
+
+
+
+
+
+
+
+        let obj={
+            name:'漳卅',
+            age:22,
+            length:2
+        }
+        console.log(obj.length);
+    </script>
+</body>
+</html>

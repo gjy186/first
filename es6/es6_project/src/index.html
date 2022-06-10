@@ -1,0 +1,61 @@
+<script>
+//var 没有块级作用域
+// for(var  i=0;i<5;i++){
+
+// }
+// console.log(i);
+
+
+//var 声明的变量可以被提前
+// (function(){
+//     console.log(a);
+//     var a=10;
+// }())
+
+
+//var 
+//1.没有块级作用域
+//2.声明的变量可以被提前
+//3.可以重复声明
+
+
+//let 
+//1.不可以重复声明
+//2.有块级作用域
+//3.不会影响作用域
+// let abc =123;
+// console.log(abc);
+// {
+//     let school="欣知";
+//     function fn(){
+//         console.log(school);
+//     }
+//     fn()
+// }
+
+
+// var num=123;
+// {
+//     console.log(num);
+//     let num=234;
+// }
+
+// for(let i=0;i<3;i++){
+//     setTimeout(function(){
+//         alert(i)
+//     },1000)
+// }
+
+
+//const 特点
+//1.声明常量一定要附初始值
+//2.一般常量都是大写
+//3.常量的值不可以修改,引用类型可操作
+//4.有块级作用域
+//5.有暂时性死区
+// {
+//     const arr=[1,2,3];
+// }
+//     console.log(arr);
+
+</script>

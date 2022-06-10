@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //es5获取实参的方式   对象
+        // function data(){
+        //     console.log(arguments);
+        // }
+        // data("gasj","ahdkj","mnkaj");
+
+
+        //rest 参数     数组
+        // function data(...args){
+        //     console.log(args);
+        // }
+        // data("nxc","iou","asaw")
+
+            //rest 参数必须要放到参数最后
+            function fn(a,b,...args){
+                console.log(a);
+                console.log(b);
+                console.log(args);
+            }
+            fn(1,2,3,4,5,6)
+    </script>
+</body>
+</html>
