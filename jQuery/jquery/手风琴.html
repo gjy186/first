@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .box{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .box_content{
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        .box_content>li{
+            width: 155px;
+            height: 450px;
+            margin-right: 15px;
+            transition: all 0.3s;
+        }
+        img{
+            width: 600px;
+            height: 500px;
+        }
+        .box_content>li:nth-last-child(1){
+            margin-right: 0;
+        }
+        .box_select{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="box_content">
+            <li class="box_select"><img src="img/img/1.jpg" alt=""></li>
+            <li><img src="img/img/7.jpg" alt=""></li>
+            <li><img src="img/img/3.jpg" alt=""></li>
+            <li><img src="img/img/4.jpg" alt=""></li>
+            <li><img src="img/img/5.jpg" alt=""></li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            $(".box_content>li").mouseenter(function(){
+             $(this).addClass("box_select").siblings().removeClass("box_select")   
+            })
+        })
+    </script>
+</body>
+</html>

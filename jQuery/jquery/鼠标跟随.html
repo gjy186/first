@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        img {
+            width: 500px;
+            height: 300px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container .box {
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+            height: 300px;
+            transition: all 0.3s;
+        }
+
+        .container .Hover {
+            width: 500px;
+            transition: all 0.3s;
+        }
+/* 新建盒子的样式 */
+        #box1 {
+            width: 200px;
+            height: 120px;
+            background-color: aqua;
+            position: absolute;
+            top: 300px;
+            left: 50px;
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box ">
+            <img src="img/img/1.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="img/img/2.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="img/img/3.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="img/img/4.jpg" alt="">
+        </div>
+        <div class="box Hover">
+            <img src="img/img/5.jpg" alt="">
+        </div>
+    </div>
+    <!-- 新建一个box用来存放鼠标悬浮后展示的照片 -->
+    <div id="box1">
+        <img src="img/img/1.jpg" alt="">
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // each 为每个匹配的元素所要执行的函数
+            $(".box").each(function () {
+                // 查找鼠标当前坐标
+                $(this).mouseover(function (e) {
+                    // console.log(e.clientX);
+                    // 新建盒子的样式更改
+                    $("#box1").css({ left: e.clientX+20, top: e.clientY+20 ,display:"block"})
+                    $(".box").removeClass("Hover")
+                    $(this).addClass("Hover")
+                    // 添加属性,将鼠标悬浮后展示的路径更改为添加类名的照片样式
+                    $("#box1 img").attr("src", $(".Hover img").attr("src"))
+
+                })
+                // 鼠标移出时隐藏样式
+                $(this).mouseout(function(){
+                    $("#box1").css({ display:"none"})
+                })
+            })
+
+
+        })
+    </script>
+
+
+</body>
+
+</html>

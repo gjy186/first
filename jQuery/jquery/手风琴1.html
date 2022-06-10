@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            
+        }
+        .box{
+            width: 1200px;
+            margin: 100px auto 0;
+
+        }
+        img{
+            width: 600px;
+            height: 400px;
+        }
+        .box li{
+            width: 200px;
+            height: 400px;
+            float: left;
+            transition: all 0.3;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="img/img/1.jpg" alt=""></li>
+            <li><img src="img/img/2.jpg" alt=""></li>
+            <li><img src="img/img/3.jpg" alt=""></li>
+            <li><img src="img/img/4.jpg" alt=""></li>
+            <li><img src="img/img/5.jpg" alt=""></li>
+        </ul>
+    </div>
+    <script>
+        $(".box li").mouseenter(function(){
+           $(this).stop().animate({
+               width:600
+           },500).siblings("li").stop().animate({width:100},500);
+        })
+    </script>
+</body>
+</html>
